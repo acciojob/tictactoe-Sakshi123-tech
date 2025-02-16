@@ -1,4 +1,3 @@
-//your JS code here. If required.
 let currentPlayer = 'player-1';
 let gameBoard = ['', '', '', '', '', '', '', '', ''];
 let player1Name = '';
@@ -6,8 +5,8 @@ let player2Name = '';
 let gameActive = false;
 
 document.getElementById('submit').addEventListener('click', function () {
-    player1Name = document.getElementById('player-1').value; // changed from 'player1' to 'player-1'
-    player2Name = document.getElementById('player-2').value; // changed from 'player2' to 'player-2'
+    player1Name = document.getElementById('player-1').value;
+    player2Name = document.getElementById('player-2').value;
     
     if (!player1Name || !player2Name) {
         alert('Please enter both player names!');
@@ -20,8 +19,6 @@ document.getElementById('submit').addEventListener('click', function () {
 
     gameActive = true;
 });
-
-// rest of your code
 
 document.querySelectorAll('.cell').forEach(cell => {
     cell.addEventListener('click', function () {
