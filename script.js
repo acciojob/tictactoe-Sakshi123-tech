@@ -28,7 +28,7 @@ document.querySelectorAll('.cell').forEach(cell => {
         cell.innerText = gameBoard[cell.id - 1];
 
         if (checkWinner()) {
-            document.querySelector('.message').innerText = `${currentPlayer === 'player-1' ? player1Name : player2Name}, congratulations you won!`;
+            document.querySelector('.message').innerText = `${currentPlayer === 'player1' ? player1Name : player2Name}, congratulations you won!`;
             gameActive = false;
             return;
         }
