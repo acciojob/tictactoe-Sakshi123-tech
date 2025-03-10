@@ -1,12 +1,12 @@
-let currentPlayer = 'player-1';
+let currentPlayer = 'player1';
 let gameBoard = ['', '', '', '', '', '', '', '', ''];
 let player1Name = '';
 let player2Name = '';
 let gameActive = false;
 
 document.getElementById('submit').addEventListener('click', function () {
-    player1Name = document.getElementById('player-1').value;
-    player2Name = document.getElementById('player-2').value;
+    player1Name = document.getElementById('player1').value;
+    player2Name = document.getElementById('player2').value;
     
     if (!player1Name || !player2Name) {
         alert('Please enter both player names!');
@@ -24,7 +24,7 @@ document.querySelectorAll('.cell').forEach(cell => {
     cell.addEventListener('click', function () {
         if (!gameActive || gameBoard[cell.id - 1]) return;
 
-        gameBoard[cell.id - 1] = currentPlayer === 'player-1' ? 'X' : 'O';
+        gameBoard[cell.id - 1] = currentPlayer === 'player1' ? 'X' : 'O';
         cell.innerText = gameBoard[cell.id - 1];
 
         if (checkWinner()) {
